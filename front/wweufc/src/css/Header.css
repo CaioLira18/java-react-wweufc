@@ -27,4 +27,9 @@
 
 .nav-link {
     cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid white;
 }

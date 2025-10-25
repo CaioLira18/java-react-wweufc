@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Header from './components/Header'
+import Lutadores from './components/Lutadores'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/lutadores" element={<Lutadores />} />
       </Routes>
     </div>
   )
