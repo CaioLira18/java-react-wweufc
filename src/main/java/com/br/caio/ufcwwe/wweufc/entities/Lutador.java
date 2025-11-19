@@ -1,5 +1,6 @@
 package com.br.caio.ufcwwe.wweufc.entities;
 
+import com.br.caio.ufcwwe.wweufc.entities.enums.ChampionEnum;
 import com.br.caio.ufcwwe.wweufc.entities.enums.Empresa;
 
 import jakarta.persistence.Column;
@@ -27,9 +28,10 @@ public class Lutador {
 
     @Column(length = 2000)
     private String description;
-
+    
     private String achievement;
     private String background;
     private String imageRender;
+    private ChampionEnum type;
 
 }

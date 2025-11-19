@@ -26,7 +26,9 @@ const Lutadores = () => {
       <div className="lutadoresContainer">
         <h1>Lutadores</h1>
         <div className="rowLutadores">
+        <h1>Campeões</h1>
         {lutadores.map((lutador) => (
+        lutador.type === '0' && (
         <div className="lutadoresBox">
             <div className="informarionsBox">
                 <div className="imageLutador">
@@ -37,7 +39,7 @@ const Lutadores = () => {
                 </div>
             </div>
         </div>
-        
+          )
          ))}
       </div>
     </div>

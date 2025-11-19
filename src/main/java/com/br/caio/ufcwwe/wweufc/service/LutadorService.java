@@ -32,6 +32,13 @@ public class LutadorService {
     public Optional<Lutador> updateLutador(String id, Lutador updatedLutador) {
         return lutadorRepository.findById(id).map(lutador -> {
             lutador.setName(updatedLutador.getName());
+            lutador.setType(updatedLutador.getType());
+            lutador.setBackground(updatedLutador.getBackground());
+            lutador.setAge(updatedLutador.getAge());
+            lutador.setDescription(updatedLutador.getDescription());
+            lutador.setEmpress(updatedLutador.getEmpress());
+            lutador.setAchievement(updatedLutador.getAchievement());
+            lutador.setImageRender(updatedLutador.getImageRender());
             return lutadorRepository.save(lutador);
         });
     }
