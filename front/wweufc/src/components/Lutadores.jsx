@@ -25,24 +25,30 @@ const Lutadores = () => {
     <div>
       <div className="lutadoresContainer">
         <h1>Lutadores</h1>
+
         <div className="rowLutadores">
-        <h1>Campeões</h1>
-        {lutadores.map((lutador) => (
-        lutador.type === '0' && (
-        <div className="lutadoresBox">
-            <div className="informarionsBox">
-                <div className="imageLutador">
-                    <img src={lutador.imageRender} alt={`Render do Lutador ${lutador.name}`} />
-                </div>
-                <div className="informationLutador">
+          <h1>Campeões</h1>
+          {lutadores
+            .filter(lutador => lutador.type === 'CHAMPION')
+            .map((lutador) => (
+              <div className="lutadoresBox" key={lutador.id}>
+                <div className="informarionsBox">
+                  <div className="imageLutador">
+                    <img 
+                      src={lutador.imageRender} 
+                      alt={`Render do Lutador ${lutador.name}`} 
+                    />
+                  </div>
+
+                  <div className="informationLutador">
                     <h2>{lutador.name}</h2>
+                  </div>
                 </div>
-            </div>
+              </div>
+            ))
+          }
         </div>
-          )
-         ))}
       </div>
-    </div>
     </div>
   )
 }
