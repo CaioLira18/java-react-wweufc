@@ -7,6 +7,8 @@ const Lutadores = () => {
   const [lutadores, setLutadores] = useState([]);
   const [empresa, setEmpresa] = useState("WWE");
   const [genero, setGenero] = useState("MASCULINO");
+  const [search, setSearch] = useState("");
+
   const API_URL = "http://localhost:8080/api";
 
   useEffect(() => {
@@ -34,6 +36,7 @@ const Lutadores = () => {
         <a href="/adicionarlutador"><button>Adicionar Lutador</button></a>
       </div>
 
+      {/* Seleção WWE / UFC */}
       <div className="empressSelect">
         <img 
           src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598134/WWE_Logo.svg_b2gftp.png" 
@@ -49,7 +52,20 @@ const Lutadores = () => {
         />
       </div>
 
-      
+      {/* Barra de pesquisa */}
+      <div className="inputSearch">
+        <div className="glassInput">
+          <i className="fa-solid fa-magnifying-glass"></i>
+          <input 
+            type="text" 
+            placeholder="Pesquisar Lutador..." 
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
+      </div>
+
+      {/* Seleção de gênero */}
       <div className="generoSelect">
         <select value={genero} onChange={(e) => setGenero(e.target.value)}>
           <option value="MASCULINO">Selecione</option>
@@ -59,62 +75,78 @@ const Lutadores = () => {
       </div>
 
       <div className="lutadoresContainer">
-        {/* Campeões */}
+
+        {/* CAMPEÕES */}
         <div className="rowLutadores">
           <div className="informationFighters">
             <h1>Campeões</h1>
-            <p>Mostrar Tudo</p>
           </div>
-          <div className="boxLutadores">
-          {lutadores
-            .filter(lutador => lutador.type === 'CHAMPION' && lutador.empress === empresa && lutador.genero === genero)
-            .map((lutador) => (
-              <div className="lutadoresBox" key={lutador.id}>
-                <div className="informarionsBox">
-                  <div className="imageLutador">
-                    <a href={`/lutador/${lutador.id}`}><img 
-                      src={lutador.imageRender} 
-                      alt={`Render do Lutador ${lutador.name}`} 
-                    /></a>
-                  </div>
 
-                  <div className="informationLutador">
-                    <h2>{lutador.name}</h2>
+          <div className="boxLutadores">
+            {lutadores
+              .filter(lutador => 
+                lutador.type === 'CHAMPION' &&
+                lutador.empress === empresa &&
+                lutador.genero === genero &&
+                lutador.name.toLowerCase().includes(search.toLowerCase())
+              )
+              .map((lutador) => (
+                <div className="lutadoresBox" key={lutador.id}>
+                  <div className="informarionsBox">
+                    <div className="imageLutador">
+                      <a href={`/lutador/${lutador.id}`}>
+                        <img 
+                          src={lutador.imageRender} 
+                          alt={`Render do Lutador ${lutador.name}`} 
+                        />
+                      </a>
+                    </div>
+
+                    <div className="informationLutador">
+                      <h2>{lutador.name}</h2>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))
-          }
-        </div>
+              ))
+            }
+          </div>
         </div>
 
-        {/* Outros Lutadores */}
+        {/* OUTROS LUTADORES */}
         <div className="rowLutadores">
           <div className="informationFighters">
             <h1>Lutadores</h1>
-            <p>Mostrar Tudo</p>
           </div>
-          <div className="boxLutadores">
-          {lutadores
-            .filter(lutador => lutador.type === 'NONE' && lutador.empress === empresa && lutador.genero === genero)
-            .map((lutador) => (
-              <div className="lutadoresBox" key={lutador.id}>
-                <div className="informarionsBox">
-                  <div className="imageLutador">
-                    <a href={`/lutador/${lutador.id}`}><img 
-                      src={lutador.imageRender} 
-                      alt={`Render do Lutador ${lutador.name}`} 
-                    /></a>
-                  </div>
 
-                  <div className="informationLutador">
-                    <h2>{lutador.name}</h2>
+          <div className="boxLutadores">
+            {lutadores
+              .filter(lutador => 
+                lutador.type === 'NONE' &&
+                lutador.empress === empresa &&
+                lutador.genero === genero &&
+                lutador.name.toLowerCase().includes(search.toLowerCase())
+              )
+              .map((lutador) => (
+                <div className="lutadoresBox" key={lutador.id}>
+                  <div className="informarionsBox">
+                    <div className="imageLutador">
+                      <a href={`/lutador/${lutador.id}`}>
+                        <img 
+                          src={lutador.imageRender} 
+                          alt={`Render do Lutador ${lutador.name}`} 
+                        />
+                      </a>
+                    </div>
+
+                    <div className="informationLutador">
+                      <h2>{lutador.name}</h2>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))
-          }
-        </div>
+              ))
+            }
+          </div>
+
         </div>
       </div>
     </div>

@@ -12,7 +12,6 @@
     overflow: hidden;
 }
 
-
 .informarionsBox::after {
     content: ''; 
     position: absolute; 
@@ -157,3 +156,28 @@
 .addFighter button:hover {
     background-color: #0056b3;
 }
+
+.inputSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.inputSearch input {
+    background-color: transparent;
+    border: 1px solid white;
+    width: 80vw;
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: white;
+}
+
+.glassInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
