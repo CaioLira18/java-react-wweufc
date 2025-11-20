@@ -9,7 +9,8 @@ const AdicionarLutadores = () => {
     achievement: "",
     background: "",
     imageRender: "",
-    type: ""
+    type: "",
+    genero: ""
   });
 
   const [toasts, setToasts] = useState([]);
@@ -67,7 +68,8 @@ const AdicionarLutadores = () => {
         achievement: "",
         background: "",
         imageRender: "",
-        type: ""
+        type: "",
+        genero: ""
       });
 
     } catch (error) {
@@ -203,6 +205,18 @@ const AdicionarLutadores = () => {
             <option value="">Selecione</option>
             <option value="CHAMPION">CHAMPION</option>
             <option value="NONE">NONE</option>
+          </select>
+
+          <label>Sexo</label>
+          <select
+            name="genero"
+            value={formData.genero}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Selecione</option>
+            <option value="MASCULINO">MASCULINO</option>
+            <option value="FEMININO">FEMININO</option>
           </select>
 
           <button onClick={handleSubmit}>Salvar</button>

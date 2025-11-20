@@ -39,6 +39,7 @@ public class LutadorService {
             lutador.setEmpress(updatedLutador.getEmpress());
             lutador.setAchievement(updatedLutador.getAchievement());
             lutador.setImageRender(updatedLutador.getImageRender());
+            lutador.setGenero(updatedLutador.getGenero());
             return lutadorRepository.save(lutador);
         });
     }

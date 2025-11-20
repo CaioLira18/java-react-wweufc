@@ -2,6 +2,7 @@ package com.br.caio.ufcwwe.wweufc.entities;
 
 import com.br.caio.ufcwwe.wweufc.entities.enums.ChampionEnum;
 import com.br.caio.ufcwwe.wweufc.entities.enums.Empresa;
+import com.br.caio.ufcwwe.wweufc.entities.enums.GeneroLutador;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -28,6 +29,8 @@ public class Lutador {
 
     @Column(length = 2000)
     private String description;
+
+    private GeneroLutador genero;
     
     private String achievement;
     private String background;

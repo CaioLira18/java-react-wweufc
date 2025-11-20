@@ -6,6 +6,7 @@ const Lutadores = () => {
 
   const [lutadores, setLutadores] = useState([]);
   const [empresa, setEmpresa] = useState("WWE");
+  const [genero, setGenero] = useState("MASCULINO");
   const API_URL = "http://localhost:8080/api";
 
   useEffect(() => {
@@ -48,6 +49,15 @@ const Lutadores = () => {
         />
       </div>
 
+      
+      <div className="generoSelect">
+        <select value={genero} onChange={(e) => setGenero(e.target.value)}>
+          <option value="MASCULINO">Selecione</option>
+          <option value="MASCULINO">Masculino</option>
+          <option value="FEMININO">Feminino</option>
+        </select>    
+      </div>
+
       <div className="lutadoresContainer">
         {/* Campeões */}
         <div className="rowLutadores">
@@ -57,7 +67,7 @@ const Lutadores = () => {
           </div>
           <div className="boxLutadores">
           {lutadores
-            .filter(lutador => lutador.type === 'CHAMPION' && lutador.empress === empresa)
+            .filter(lutador => lutador.type === 'CHAMPION' && lutador.empress === empresa && lutador.genero === genero)
             .map((lutador) => (
               <div className="lutadoresBox" key={lutador.id}>
                 <div className="informarionsBox">
@@ -86,7 +96,7 @@ const Lutadores = () => {
           </div>
           <div className="boxLutadores">
           {lutadores
-            .filter(lutador => lutador.type === 'NONE' && lutador.empress === empresa)
+            .filter(lutador => lutador.type === 'NONE' && lutador.empress === empresa && lutador.genero === genero)
             .map((lutador) => (
               <div className="lutadoresBox" key={lutador.id}>
                 <div className="informarionsBox">
