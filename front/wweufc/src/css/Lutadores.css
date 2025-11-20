@@ -65,9 +65,38 @@
 
 .rowLutadores {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     gap: 50px;
     margin-top: 100px;
+}
+
+.informationFighters {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.informationFighters h1 {
+    color: white;
+    font-size: 25px;
+}
+
+.empressSelect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+}
+
+.empressSelect img {
+    width: 80px;
+    transition: 0.3s all ease-in-out;
+}
+
+.empressSelect img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
