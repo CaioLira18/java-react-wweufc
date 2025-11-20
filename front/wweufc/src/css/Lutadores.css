@@ -12,6 +12,7 @@
     overflow: hidden;
 }
 
+
 .informarionsBox::after {
     content: ''; 
     position: absolute; 
@@ -69,6 +70,16 @@
     flex-direction: column;
     gap: 50px;
     margin-top: 100px;
+}
+
+.lutadoresBox {
+    display: flex;
+    
+}
+
+.boxLutadores {
+    display: flex;
+    gap: 20px;
 }
 
 .informationFighters {

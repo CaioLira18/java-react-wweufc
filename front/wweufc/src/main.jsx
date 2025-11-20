@@ -5,7 +5,7 @@ import './css/Header.css'
 import './css/Home.css'
 import './css/Lutadores.css'
 import './css/AdicionarLutador.css'
-
+import './css/IndividualLutador.css'
 
 
 

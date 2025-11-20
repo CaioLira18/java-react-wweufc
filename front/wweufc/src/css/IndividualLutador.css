@@ -1,0 +1,175 @@
+/* ==================== CONTAINER PRINCIPAL ==================== */
+
+.lutador-individual-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+}
+
+/* Overlay escuro bonito */
+.lutador-individual-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.92)
+    );
+    z-index: 0;
+}
+
+/* ==================== CARD DO LUTADOR ==================== */
+
+.lutador-card {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    padding: 120px 40px 80px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==================== IMAGEM DO LUTADOR ==================== */
+
+.lutador-image-container img {
+    width: 450px;
+    max-width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0px 0px 25px rgba(255, 255, 255, 0.2));
+}
+
+/* ==================== INFORMAÇÕES ==================== */
+
+.lutador-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: white;
+    max-width: 550px;
+}
+
+.empresaLutador {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.empresaLutador img {
+    width: 90px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+}
+
+.lutador-info h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.lutador-section h3 {
+    font-size: 1.4rem;
+    color: #f2f2f2;
+    margin-bottom: 6px;
+}
+
+.lutador-section p {
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+/* ==================== FAIXA PRETA DESCRIÇÃO ==================== */
+
+.containerDescription {
+    width: 100%;
+    height: 400px;
+    background-color: #000;
+    padding: 50px 20px;
+    margin-top: -40px; /* cola ao card */
+    position: relative;
+    z-index: 1;
+}
+
+.decription {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+
+.decription h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.decription p {
+    opacity: 0.85;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.lutador-card {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.lutador-image-container img {
+    display: block;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.containerDescription {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+
+/* ==================== RESPONSIVIDADE ==================== */
+
+@media (max-width: 1024px) {
+    .lutador-card {
+        gap: 50px;
+        padding-top: 100px;
+    }
+
+    .lutador-info h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .lutador-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .empresaLutador {
+        justify-content: center;
+    }
+
+    .empresaLutador img {
+        width: 75px;
+    }
+
+    .lutador-info h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lutador-image-container img {
+        width: 300px;
+    }
+
+    .decription h2 {
+        font-size: 1.8rem;
+    }
+}

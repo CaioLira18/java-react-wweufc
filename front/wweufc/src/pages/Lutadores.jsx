@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Lutadores = () => {
 
@@ -17,16 +19,20 @@ const Lutadores = () => {
       .then((data) => setLutadores(data))
       .catch((error) => {
         console.error(error);
-        alert("Erro ao buscar itens.");
+        toast.error("Erro ao buscar itens.");
       });
   }, []);
 
   return (
     <div>
 
+      {/* Toast container */}
+      <ToastContainer />
+
       <div className="addFighter">
         <a href="/adicionarlutador"><button>Adicionar Lutador</button></a>
       </div>
+
       <div className="empressSelect">
         <img 
           src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598134/WWE_Logo.svg_b2gftp.png" 
@@ -41,22 +47,25 @@ const Lutadores = () => {
           style={{ cursor: 'pointer', opacity: empresa === "UFC" ? 1 : 0.5 }}
         />
       </div>
+
       <div className="lutadoresContainer">
-         <div className="rowLutadores">
+        {/* Campeões */}
+        <div className="rowLutadores">
           <div className="informationFighters">
             <h1>Campeões</h1>
             <p>Mostrar Tudo</p>
           </div>
+          <div className="boxLutadores">
           {lutadores
             .filter(lutador => lutador.type === 'CHAMPION' && lutador.empress === empresa)
             .map((lutador) => (
               <div className="lutadoresBox" key={lutador.id}>
                 <div className="informarionsBox">
                   <div className="imageLutador">
-                    <img 
+                    <a href={`/lutador/${lutador.id}`}><img 
                       src={lutador.imageRender} 
                       alt={`Render do Lutador ${lutador.name}`} 
-                    />
+                    /></a>
                   </div>
 
                   <div className="informationLutador">
@@ -67,22 +76,25 @@ const Lutadores = () => {
             ))
           }
         </div>
+        </div>
 
+        {/* Outros Lutadores */}
         <div className="rowLutadores">
           <div className="informationFighters">
             <h1>Lutadores</h1>
             <p>Mostrar Tudo</p>
           </div>
+          <div className="boxLutadores">
           {lutadores
             .filter(lutador => lutador.type === 'NONE' && lutador.empress === empresa)
             .map((lutador) => (
               <div className="lutadoresBox" key={lutador.id}>
                 <div className="informarionsBox">
                   <div className="imageLutador">
-                    <img 
+                    <a href={`/lutador/${lutador.id}`}><img 
                       src={lutador.imageRender} 
                       alt={`Render do Lutador ${lutador.name}`} 
-                    />
+                    /></a>
                   </div>
 
                   <div className="informationLutador">
@@ -93,9 +105,10 @@ const Lutadores = () => {
             ))
           }
         </div>
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Lutadores
+export default Lutadores;

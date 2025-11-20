@@ -19,11 +19,6 @@ const Header = () => {
         </div>
         <div className="nav-link">
             <ul>
-                <li>Campeões</li>
-            </ul>
-        </div>
-        <div className="nav-link">
-            <ul>
                 <li>Proximos Eventos</li>
             </ul>
         </div>
