@@ -28,61 +28,60 @@ const Eventos = () => {
                 <a href="/adicionarEventos"><button>Adicionar Evento</button></a>
             </div>
 
-             <div className="empressSelect">
-        <img 
-          src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598134/WWE_Logo.svg_b2gftp.png" 
-          alt="WWE" 
-          onClick={() => setEmpresa("WWE")}
-          style={{ cursor: 'pointer', opacity: empresa === "WWE" ? 1 : 0.5 }}
-        />
-        <img 
-          src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598163/UFC_logo.svg_t3belb.png" 
-          alt="UFC" 
-          onClick={() => setEmpresa("UFC")}
-          style={{ cursor: 'pointer', opacity: empresa === "UFC" ? 1 : 0.5 }}
-        />
-      </div>
+            <div className="empressSelect">
+                <img 
+                    src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598134/WWE_Logo.svg_b2gftp.png" 
+                    alt="WWE" 
+                    onClick={() => setEmpresa("WWE")}
+                    style={{ cursor: 'pointer', opacity: empresa === "WWE" ? 1 : 0.5 }}
+                />
+                <img 
+                    src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598163/UFC_logo.svg_t3belb.png" 
+                    alt="UFC" 
+                    onClick={() => setEmpresa("UFC")}
+                    style={{ cursor: 'pointer', opacity: empresa === "UFC" ? 1 : 0.5 }}
+                />
+            </div>
 
             <div className="eventosContainer">
-                {/* Campeões */}
                 <div className="rowEventos">
-                    <div className="boxEventos">
-                        {eventos
-                            .filter(evento => evento.empress === empresa)
-                            .map((evento) => (
-                                <div className="eventosBox" key={evento.id}>
-                                    <div className="informarionsBoxEventos">
-                                        <div className="logoEventos">
-                                            {evento.empress === "WWE" ? (
-                                                <img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598134/WWE_Logo.svg_b2gftp.png" alt="WWE Logo" />
-                                            ) : (
-                                                <img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598163/UFC_logo.svg_t3belb.png" alt="UFC Logo" />
+                    {eventos
+                        .filter(evento => evento.empress === empresa)
+                        .map((evento) => (
+                            <div className="eventosBox" key={evento.id}>
+                                <div className="informarionsBoxEventos">
+                                    <div className="logoEventos">
+                                        {evento.empress === "WWE" ? (
+                                            <img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598134/WWE_Logo.svg_b2gftp.png" alt="WWE Logo" />
+                                        ) : (
+                                            <img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598163/UFC_logo.svg_t3belb.png" alt="UFC Logo" />
+                                        )}
+                                        <h2>{evento.name}</h2>
+                                    </div>
+
+
+                                        <div className="headerEvento">
+                                            <p>Onde Assistir:</p>
+                                            {evento.empress === "WWE" && (
+                                                <img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763657459/netflix_logo_icon_170919_nb7up1.png" alt="" />
                                             )}
-                                            <div className="headerEvento">
-                                                <h2>{evento.name}</h2>
-                                                {evento.empress === "WWE" && (
-                                                    <img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763657459/netflix_logo_icon_170919_nb7up1.png" alt="" />
-                                                )}
-                                                {evento.empress === "UFC" && (
-                                                    <img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763657448/ufc-fight-pass-logo_ssoqci.png" alt="" />
-                                                )}
-                                                
-                                            </div>
+                                            {evento.empress === "UFC" && (
+                                                <img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763657448/ufc-fight-pass-logo_ssoqci.png" alt="" />
+                                            )}
                                         </div>
-                                        <div className="informationEventos">
-                                            <p>Sobre: <strong>{evento.description}</strong></p>
-                                            <p>Local: <strong>{evento.location}</strong></p>
-                                            <p>Horario: <strong>{evento.horario}</strong></p>
-                                            <div className="notificaçõesButton">
-                                                <i class="fa-solid fa-bell"></i>
-                                                <button>Ativar Notificações</button>
-                                            </div>
+                                    <div className="informationEventos">
+                                        <p>Sobre: <strong>{evento.description}</strong></p>
+                                        <p>Local: <strong>{evento.location}</strong></p>
+                                        <p>Horario: <strong>{evento.horario}</strong></p>
+                                        <div className="notificaçõesButton">
+                                            <i className="fa-solid fa-bell"></i>
+                                            <button>Ativar Notificações</button>
                                         </div>
                                     </div>
                                 </div>
-                            ))
-                        }
-                    </div>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>

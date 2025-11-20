@@ -62,6 +62,7 @@
     border: 1px solid rgb(255, 255, 255);
     background-color: transparent;
     transition: 0.3s all ease-in-out;
+    cursor: pointer;
 }
 
 .buttonSlide button:hover {

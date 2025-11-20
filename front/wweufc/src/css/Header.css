@@ -29,8 +29,11 @@
 .nav-link {
     cursor: pointer;
     transition: 0.3s all ease-in-out;
+    color: #000;
 }
 
 .nav-link:hover {
-    border-bottom: 1px solid white;
+    background-color: rgb(101, 101, 101);
+    padding: 10px;
+    border-radius: 10px;
 }

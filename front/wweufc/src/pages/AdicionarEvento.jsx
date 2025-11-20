@@ -149,7 +149,7 @@ const AdicionarEvento = () => {
           />
 
             {/* Localização */}
-          <label>Localização:</label>
+          <label>Horario:</label>
           <input
             type="text"
             name="horario"
