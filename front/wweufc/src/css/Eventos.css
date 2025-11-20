@@ -1,0 +1,97 @@
+.informationEventos {
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.rowEventos {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.eventosContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.informarionsBoxEventos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    width: 600px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.informationEventos {
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    margin: 0;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.informationEventos p {
+    color: #ffffff;
+    font-weight: lighter;
+}
+
+.logoEventos {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 20px; 
+    gap: 20px;
+}
+
+.logoEventos h2 {
+    color: #ffffff;
+}
+
+.logoEventos img {
+    width: 40px;
+}
+
+.notificaçõesButton  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    background-color: red;
+    border-radius: 10px;
+    gap: 10px;
+    transition: 0.3s all ease-in-out;
+}
+
+.notificaçõesButton:hover {
+    background-color: #a62424;
+    cursor: pointer;
+}
+
+.notificaçõesButton button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.headerEvento {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding-right: 20px;
+}
+
+.headerEvento img {
+    width: 100px;
+}

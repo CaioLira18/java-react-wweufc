@@ -73,8 +73,7 @@
 }
 
 .lutadoresBox {
-    display: flex;
-    
+    display: flex;   
 }
 
 .boxLutadores {
@@ -116,7 +115,8 @@
 .generoSelect {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
+    padding-right: 100px;
     gap: 10px;
     margin-top: 100px;
 }

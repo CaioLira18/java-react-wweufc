@@ -19,7 +19,7 @@ const Header = () => {
         </div>
         <div className="nav-link">
             <ul>
-                <li>Proximos Eventos</li>
+                <a href="/eventos"><li>Proximos Eventos</li></a>
             </ul>
         </div>
         <div className="nav-link">

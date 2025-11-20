@@ -4,6 +4,8 @@ import Header from './components/Header'
 import Lutadores from './pages/Lutadores'
 import AdicionarLutadores from './pages/AdicionarLutadores'
 import LutadorIndividual from './pages/LutadorIndividual'
+import Eventos from './pages/Eventos'
+import AdicionarEvento from './pages/AdicionarEvento'
 
 function App() {
 
@@ -15,6 +17,8 @@ function App() {
         <Route path="/lutadores" element={<Lutadores />} />
         <Route path="/adicionarlutador" element={<AdicionarLutadores />} />
         <Route path="/lutador/:id" element={<LutadorIndividual />} />
+        <Route path="/eventos" element={<Eventos />} />
+        <Route path="/adicionareventos" element={<AdicionarEvento />} />
       </Routes>
     </div>
   )
