@@ -23,6 +23,10 @@ const Lutadores = () => {
 
   return (
     <div>
+
+      <div className="addFighter">
+        <a href="/adicionarlutador"><button>Adicionar Lutador</button></a>
+      </div>
       <div className="empressSelect">
         <img 
           src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598134/WWE_Logo.svg_b2gftp.png" 

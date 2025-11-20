@@ -1,7 +1,8 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Header from './components/Header'
-import Lutadores from './components/Lutadores'
+import Lutadores from './pages/Lutadores'
+import AdicionarLutadores from './pages/AdicionarLutadores'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/lutadores" element={<Lutadores />} />
+        <Route path="/adicionarlutador" element={<AdicionarLutadores />} />
       </Routes>
     </div>
   )
