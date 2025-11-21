@@ -1,0 +1,56 @@
+.imageHome {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.imageHome img {
+    width: 100%;
+}
+
+.showNews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 80px;
+}
+
+.rawLogo {
+    width: 150px;
+}
+
+.cinturaoShowContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.cinturaoShowBox img {
+    width: 220px;
+}
+
+.cinturaoShowBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.informationCinturao {
+    width: 300px;
+    font-size: 13px;
+}
+
+.informationCinturao h2 {
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+
+.informationCinturao p {
+    font-weight: bold;
+}

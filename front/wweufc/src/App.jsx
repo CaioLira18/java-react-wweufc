@@ -8,6 +8,8 @@ import Eventos from './pages/Eventos'
 import AdicionarEvento from './pages/AdicionarEvento'
 import AdicionarMateria from './pages/AdicionarMateria'
 import MateriaIndividual from './pages/MateriaIndividual'
+import WWEpage from './pages/WWEpage'
+import AdicionarCinturao from './pages/AdicionarCinturao'
 
 function App() {
 
@@ -23,6 +25,8 @@ function App() {
         <Route path="/adicionareventos" element={<AdicionarEvento />} />
         <Route path="/adicionarmaterias" element={<AdicionarMateria />} />
         <Route path="/materia/:id" element={<MateriaIndividual />} />
+        <Route path="/adicionarcinturao" element={<AdicionarCinturao />} />
+        <Route path="/wwe" element={<WWEpage />} />
       </Routes>
     </div>
   )

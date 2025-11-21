@@ -20,6 +20,7 @@ public class Cinturao {
     private String id;
 
     private String name;
+    private String image;
     private String description;
     private Empresa empress;
     private String dateCreation;

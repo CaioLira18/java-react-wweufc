@@ -24,7 +24,7 @@ const Header = () => {
         </div>
         <div className="nav-link">
             <ul>
-                <li>WWE</li>
+                <a href="/wwe"><li>WWE</li></a>
             </ul>
         </div>
         <div className="nav-link">

@@ -2,8 +2,10 @@ package com.br.caio.ufcwwe.wweufc.service;
 
 import java.util.List;
 import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.br.caio.ufcwwe.wweufc.entities.Cinturao;
 import com.br.caio.ufcwwe.wweufc.repository.CinturaoRepository;
 
@@ -27,6 +29,11 @@ public class CinturaoService {
     public Optional<Cinturao> updateCinturao(String id, Cinturao updatedCinturao) {
         return cinturaoRepository.findById(id).map(cinturao -> {
             cinturao.setName(updatedCinturao.getName());
+            cinturao.setDescription(updatedCinturao.getDescription());
+            cinturao.setImage(updatedCinturao.getImage());
+            cinturao.setDateCreation(updatedCinturao.getDateCreation());
+            cinturao.setEmpress(updatedCinturao.getEmpress());
+            cinturao.setCurrentChamp(updatedCinturao.getCurrentChamp());
             return cinturaoRepository.save(cinturao);
         });
     }

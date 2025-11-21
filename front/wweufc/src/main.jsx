@@ -8,6 +8,8 @@ import './css/AdicionarLutador.css'
 import './css/IndividualLutador.css'
 import './css/Eventos.css'
 import './css/IndividualMateria.css'
+import './css/WWE.css'
+
 
 
 
