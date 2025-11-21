@@ -24,12 +24,12 @@ const Header = () => {
         </div>
         <div className="nav-link">
             <ul>
-                <a href="/wwe"><li>WWE</li></a>
+                <a href="/wwe"><img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598134/WWE_Logo.svg_b2gftp.png" alt="" /></a>
             </ul>
         </div>
         <div className="nav-link">
             <ul>
-                <li>UFC</li>
+                <li><img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763735323/drilldown_qddjmf.png" alt="" /></li>
             </ul>
         </div> 
       </div>
