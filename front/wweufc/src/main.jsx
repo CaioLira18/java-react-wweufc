@@ -7,6 +7,8 @@ import './css/Lutadores.css'
 import './css/AdicionarLutador.css'
 import './css/IndividualLutador.css'
 import './css/Eventos.css'
+import './css/IndividualMateria.css'
+
 
 
 

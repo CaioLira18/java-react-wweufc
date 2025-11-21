@@ -2,8 +2,10 @@ package com.br.caio.ufcwwe.wweufc.service;
 
 import java.util.List;
 import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.br.caio.ufcwwe.wweufc.entities.Materia;
 import com.br.caio.ufcwwe.wweufc.repository.MateriaRepository;
 
@@ -30,6 +32,10 @@ public class MateriaService {
             materia.setTitle(updatedMateria.getTitle());
             materia.setDescription(updatedMateria.getDescription());
             materia.setBackgroundImage(updatedMateria.getBackgroundImage());
+            materia.setType(updatedMateria.getType());
+            materia.setDate(updatedMateria.getDate());
+            materia.setAutor(updatedMateria.getAutor());
+
 
             return materiaRepository.save(materia);
         

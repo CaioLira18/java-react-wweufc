@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.br.caio.ufcwwe.wweufc.entities.Evento;
-import com.br.caio.ufcwwe.wweufc.entities.Lutador;
 import com.br.caio.ufcwwe.wweufc.repository.EventoRepository;
 
 

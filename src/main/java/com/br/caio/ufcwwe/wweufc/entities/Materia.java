@@ -1,5 +1,9 @@
 package com.br.caio.ufcwwe.wweufc.entities;
 
+import java.util.Date;
+
+import com.br.caio.ufcwwe.wweufc.entities.enums.MateriaEnum;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,4 +27,7 @@ public class Materia {
     private String title;
     private String description;
     private String backgroundImage;
+    private Date date;
+    private String autor;
+    private MateriaEnum type;
 }

@@ -6,6 +6,8 @@ import AdicionarLutadores from './pages/AdicionarLutadores'
 import LutadorIndividual from './pages/LutadorIndividual'
 import Eventos from './pages/Eventos'
 import AdicionarEvento from './pages/AdicionarEvento'
+import AdicionarMateria from './pages/AdicionarMateria'
+import MateriaIndividual from './pages/MateriaIndividual'
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
         <Route path="/lutador/:id" element={<LutadorIndividual />} />
         <Route path="/eventos" element={<Eventos />} />
         <Route path="/adicionareventos" element={<AdicionarEvento />} />
+        <Route path="/adicionarmaterias" element={<AdicionarMateria />} />
+        <Route path="/materia/:id" element={<MateriaIndividual />} />
       </Routes>
     </div>
   )

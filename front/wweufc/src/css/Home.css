@@ -54,6 +54,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
 .buttonSlide button {
@@ -69,5 +70,54 @@
     background-color: white;
     border: 1px solid black;
     color: #000;
+}
+
+.otherMateriaBox {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 40px;
+}
+
+.otherMateriaBox img {
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.informationMateria button {
+    width: 600px;
+    height: 40px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+.informationMateria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;   
+    text-align: center;
+}
+
+.otherMateriaBox button:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black
+}
+
+.headerMateria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 10px;
 }
 
