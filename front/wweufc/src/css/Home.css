@@ -85,6 +85,12 @@
     width: 600px;
     height: auto;
     border-radius: 10px;
+    transition: 0.3s all ease-in-out;
+}
+
+.otherMateriaBox img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .informationMateria button {
@@ -105,6 +111,7 @@
     flex-direction: column;
     width: 600px;   
     text-align: center;
+    margin-top: 30px;
 }
 
 .otherMateriaBox button:hover {

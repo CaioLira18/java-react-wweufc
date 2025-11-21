@@ -53,7 +53,7 @@ const Home = () => {
         </div>
         {materias.filter(materia => materia.type === "NORMAL").map((materia) => (
           <div className="otherMateriaBox" key={materia.id}>
-            <img src={materia.backgroundImage} alt={materia.title} />
+            <a href={`/materia/${materia.id}`}><img src={materia.backgroundImage} alt={materia.title} /></a>
 
             <div className="informationMateria">
               <h2>{materia.title}</h2>

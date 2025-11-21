@@ -45,7 +45,7 @@ const Lutadores = () => {
           style={{ cursor: 'pointer', opacity: empresa === "WWE" ? 1 : 0.5 }}
         />
         <img 
-          src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598163/UFC_logo.svg_t3belb.png" 
+          src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763735323/drilldown_qddjmf.png" 
           alt="UFC" 
           onClick={() => setEmpresa("UFC")}
           style={{ cursor: 'pointer', opacity: empresa === "UFC" ? 1 : 0.5 }}

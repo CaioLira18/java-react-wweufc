@@ -119,7 +119,7 @@ const AdicionarLutadores = () => {
       <div className="adicionar-container">
         <div className="logosAdicionar">
             <img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598134/WWE_Logo.svg_b2gftp.png" alt="" />
-            <img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598163/UFC_logo.svg_t3belb.png" alt="" />
+            <img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763735323/drilldown_qddjmf.png" alt="" />
         </div>
         <h1>Adicionar Lutador</h1>
 

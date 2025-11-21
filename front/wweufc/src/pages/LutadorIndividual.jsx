@@ -101,13 +101,6 @@ const LutadorIndividual = () => {
                     backgroundRepeat: "no-repeat",
                 }}>
                 <div className="lutador-card">
-                    <div className="lutador-image-container">
-                        <img
-                            src={lutador.imageRender}
-                            alt={lutador.name}
-                        />
-                    </div>
-
                     <div className="lutador-info">
 
                         <div className="empresaLutador">
@@ -121,7 +114,7 @@ const LutadorIndividual = () => {
 
                             {lutador.empress === 'UFC' && (
                                 <img
-                                    src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598163/UFC_logo.svg_t3belb.png"
+                                    src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763735323/drilldown_qddjmf.png"
                                     alt="UFC Logo"
                                     className="empress-logo"
                                 />
@@ -131,7 +124,7 @@ const LutadorIndividual = () => {
 
                         <div className="lutador-section">
                             <h3>Idade</h3>
-                            <p>{lutador.age}</p>
+                            <p>{lutador.age} anos</p>
                         </div>
 
                         <div className="lutador-section">
@@ -140,8 +133,8 @@ const LutadorIndividual = () => {
                         </div>
 
                         <div className="lutador-section">
-                            <h3>História</h3>
-                            <p>{lutador.background}</p>
+                            <h3>Brand Atual</h3>
+                            <p>{lutador.brand}</p>
                         </div>
                     </div>
                 </div>

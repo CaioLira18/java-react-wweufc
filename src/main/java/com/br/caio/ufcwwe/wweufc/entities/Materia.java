@@ -1,9 +1,10 @@
 package com.br.caio.ufcwwe.wweufc.entities;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import com.br.caio.ufcwwe.wweufc.entities.enums.MateriaEnum;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,9 +26,12 @@ public class Materia {
     private String id;
 
     private String title;
+    
+    @Column(length = 5000)
     private String description;
+
     private String backgroundImage;
-    private Date date;
+    private LocalDate date;
     private String autor;
     private MateriaEnum type;
 }
