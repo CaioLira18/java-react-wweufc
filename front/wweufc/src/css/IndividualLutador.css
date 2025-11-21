@@ -1,105 +1,142 @@
-.materia-individual-container {
+.lutador-individual-container {
+    min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    max-width: 1200px;
-    margin: 80px auto;
-    padding: 0 20px;
-    animation: fadeIn 0.6s ease-in;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 80px 20px 60px;
+    position: relative;
+    margin-top: 50px;
 }
 
-.materia-individual-container h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 800;
-    text-align: center;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+.lutador-individual-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
+    z-index: 1;
+}
+
+.lutador-card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 24px;
+    padding: 50px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: slideUp 0.8s ease-out;
+}
+
+.lutador-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.empresaLutador {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.empress-logo {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.2));
+}
+
+.empresaLutador h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    letter-spacing: -1px;
+    margin: 0;
 }
 
-.containerMateriaHeader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-    padding: 15px 30px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 50px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.lutador-section {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
 }
 
-.containerMateriaHeader p {
-    font-size: 14px;
-    color: #b0b0b0;
+.lutador-section:last-of-type {
+    border-bottom: none;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.lutador-section:hover {
+    padding-left: 15px;
+}
+
+.lutador-section h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.lutador-section p {
+    font-size: clamp(17px, 2vw, 21px);
+    color: #fff;
+    margin: 0;
+    line-height: 1.5;
     font-weight: 500;
-    letter-spacing: 0.5px;
 }
 
-.descriptionMateria {
+.containerDescription {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
     width: 100%;
-    max-width: 900px;
-    margin-top: 60px;
-    padding: 40px;
-    font-size: clamp(16px, 1.5vw, 19px);
-    line-height: 1.8;
+    margin-top: 0;
+}
+
+.decription {
+    background: transparent;
+    backdrop-filter: none;
+    border-radius: 0;
+    padding: 30px 0 0;
+    box-shadow: none;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.decription h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.5px;
+}
+
+.decription p {
+    font-size: clamp(16px, 1.8vw, 19px);
+    line-height: 1.9;
     color: #e0e0e0;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 20px;
-    border-left: 4px solid #0f0;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.descriptionMateria:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 50px rgba(0, 255, 0, 0.1);
-}
-
-.descriptionMateria p {
     margin: 0;
     text-align: justify;
 }
 
-.imageMateria {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 900px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.imageMateria:hover {
-    transform: scale(1.02);
-    box-shadow: 0 25px 80px rgba(0, 255, 0, 0.15);
-}
-
-.imageMateria img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.4s ease;
-}
-
-.imageMateria:hover img {
-    transform: scale(1.05);
-}
-
-@keyframes fadeIn {
+@keyframes slideUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(40px);
     }
     to {
         opacity: 1;
@@ -109,41 +146,58 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .materia-individual-container {
-        margin: 40px auto;
-        padding: 0 15px;
+    .lutador-individual-container {
+        padding: 60px 15px 40px;
     }
 
-    .containerMateriaHeader {
-        padding: 12px 20px;
+    .lutador-card {
+        padding: 35px 25px;
+        border-radius: 20px;
+    }
+
+    .empresaLutador {
         flex-direction: column;
-        gap: 5px;
+        align-items: flex-start;
+        gap: 15px;
     }
 
-    .containerMateriaHeader p {
-        font-size: 12px;
-        text-align: center;
+    .empress-logo {
+        width: 60px;
     }
 
-    .descriptionMateria {
-        margin-top: 40px;
-        padding: 25px;
-        border-radius: 15px;
+    .lutador-section {
+        padding: 20px;
+        border-radius: 12px;
     }
 
-    .imageMateria {
-        margin-top: 40px;
-        margin-bottom: 40px;
-        border-radius: 15px;
+    .containerDescription {
+        margin-top: 30px;
+    }
+
+    .decription {
+        padding: 35px 25px;
+        border-radius: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .descriptionMateria {
-        padding: 20px;
+    .lutador-card {
+        padding: 25px 20px;
     }
 
-    .containerMateriaHeader {
-        padding: 10px 15px;
+    .lutador-section {
+        padding: 15px 18px;
+    }
+
+    .empresaLutador {
+        gap: 10px;
+    }
+
+    .empress-logo {
+        width: 50px;
+    }
+
+    .decription {
+        padding: 25px 20px;
     }
 }

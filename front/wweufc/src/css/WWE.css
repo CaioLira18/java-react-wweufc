@@ -14,6 +14,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 80px;
+    margin-top: -100px;
 }
 
 .rawLogo {
@@ -24,12 +25,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     margin-top: 30px;
 }
 
 .cinturaoShowBox img {
     width: 220px;
+    transition: all 0.3s ease-in-out;
+}
+
+.cinturaoShowBox img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .cinturaoShowBox {
@@ -38,7 +44,18 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+}
+
+.rowCinturao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cinturoesTitle {
     margin-top: 100px;
+    font-size: 25px;
+    font-weight: lighter;
 }
 
 .informationCinturao {
@@ -52,5 +69,5 @@
 }
 
 .informationCinturao p {
-    font-weight: bold;
+    font-weight: lighter;
 }

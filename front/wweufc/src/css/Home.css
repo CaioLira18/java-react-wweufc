@@ -93,6 +93,10 @@
     cursor: pointer;
 }
 
+.otherMaterias {
+    text-align: center;
+}
+
 .informationMateria button {
     width: 600px;
     height: 40px;

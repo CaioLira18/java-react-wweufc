@@ -136,12 +136,11 @@ const LutadorIndividual = () => {
                             <h3>Brand Atual</h3>
                             <p>{lutador.brand}</p>
                         </div>
-                    </div>
-                </div>
-                <div className="containerDescription">
-                    <div className="decription">
-                        <h2>Descrição</h2>
-                        <p>{lutador.description}</p>
+
+                        <div className="lutador-section">
+                            <h3>Sobre</h3>
+                            <p>{lutador.description}</p>
+                        </div>
                     </div>
                 </div>
             </div>

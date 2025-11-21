@@ -47,10 +47,10 @@ const WWEpage = () => {
                 <a href="/adicionarcinturao"><button>Adicionar Cinturao</button></a>
             </div>
 
-            <div className="showNews">
-                <img className='rawLogo' src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763737140/WWE_RAW_Logo_2025.svg_cwcepj.png" alt="" />
 
+            <div className="showNews">
                 <div className="otherMaterias">
+                    <h1 className='cinturoesTitle'>Ultimas Noticias</h1>
                     {materias.filter(materia => materia.type === "NORMAL").map((materia) => (
                         <div className="otherMateriaBox" key={materia.id}>
                             <a href={`/materia/${materia.id}`}><img src={materia.backgroundImage} alt={materia.title} /></a>
@@ -65,18 +65,20 @@ const WWEpage = () => {
                     ))}
                 </div>
 
-                {cinturoes.map((cinturao) => (
-                <div className="cinturaoShowContainer">
-                    <h1>Cinturões</h1>
-                    <div className="cinturaoShowBox">
-                        <img src={cinturao.image} alt="" />
-                        <div className="informationCinturao">
-                            <h2>{cinturao.name}</h2>
-                            <p>{cinturao.currentChamp}</p>
+                <h1 className='cinturoesTitle'>Cinturões</h1>
+                <div className="rowCinturao">
+                    {cinturoes.map((cinturao) => (
+                        <div className="cinturaoShowContainer">
+                            <div className="cinturaoShowBox">
+                                <img src={cinturao.image} alt="" />
+                                <div className="informationCinturao">
+                                    <h2>{cinturao.name}</h2>
+                                    <p>Atual Campeão: <strong>{cinturao.currentChamp}</strong></p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
-                ))}
             </div>
         </div>
     )

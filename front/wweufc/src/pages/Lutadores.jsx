@@ -32,10 +32,6 @@ const Lutadores = () => {
       {/* Toast container */}
       <ToastContainer />
 
-      <div className="addFighter">
-        <a href="/adicionarlutador"><button>Adicionar Lutador</button></a>
-      </div>
-
       {/* Seleção WWE / UFC */}
       <div className="empressSelect">
         <img 
@@ -65,13 +61,18 @@ const Lutadores = () => {
         </div>
       </div>
 
+      
+
       {/* Seleção de gênero */}
       <div className="generoSelect">
         <select value={genero} onChange={(e) => setGenero(e.target.value)}>
-          <option value="MASCULINO">Selecione</option>
           <option value="MASCULINO">Masculino</option>
           <option value="FEMININO">Feminino</option>
         </select>    
+      </div>
+
+      <div className="addFighter">
+        <a href="/adicionarlutador"><button>Adicionar Lutador</button></a>
       </div>
 
       <div className="lutadoresContainer">

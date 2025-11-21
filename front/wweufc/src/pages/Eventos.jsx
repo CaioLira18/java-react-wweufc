@@ -75,7 +75,7 @@ const Eventos = () => {
                                         <p>Horario: <strong>{evento.horario}</strong></p>
                                         <div className="notificaçõesButton">
                                             <i className="fa-solid fa-bell"></i>
-                                            <button>Ativar Notificações</button>
+                                            <button>Ativar Lembrete</button>
                                         </div>
                                     </div>
                                 </div>
