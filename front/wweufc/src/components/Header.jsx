@@ -41,8 +41,7 @@ const Header = () => {
             <ul>
                 <li>
                     <div className="userHeader">
-                        <a href="/login"><i class="fa-solid fa-user"></i>
-                        <h3>Login</h3></a>
+                        <a href="/login"><i class="fa-solid fa-user"></i>Login</a>
                     </div>
                 </li>
             </ul>
