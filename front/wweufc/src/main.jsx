@@ -9,6 +9,9 @@ import './css/Eventos.css'
 import './css/IndividualMateria.css'
 import './css/IndividualLutador.css'
 import './css/WWE.css'
+import './css/Login.css'
+import './css/AdminPage.css'
+
 
 
 

@@ -10,6 +10,8 @@ import AdicionarMateria from './pages/AdicionarMateria'
 import MateriaIndividual from './pages/MateriaIndividual'
 import WWEpage from './pages/WWEpage'
 import AdicionarCinturao from './pages/AdicionarCinturao'
+import AdminPage from './pages/AdminPage'
+import Login from './pages/Login'
 
 function App() {
 
@@ -26,7 +28,9 @@ function App() {
         <Route path="/adicionarmaterias" element={<AdicionarMateria />} />
         <Route path="/materia/:id" element={<MateriaIndividual />} />
         <Route path="/adicionarcinturao" element={<AdicionarCinturao />} />
+        <Route path="/adminpage" element={<AdminPage />} />
         <Route path="/wwe" element={<WWEpage />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   )

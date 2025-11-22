@@ -22,6 +22,11 @@ const Header = () => {
                 <a href="/eventos"><li>Proximos Eventos</li></a>
             </ul>
         </div>
+         <div className="nav-link">
+            <ul>
+                <a href="/adminpage"><li>Painel de Admin</li></a>
+            </ul>
+        </div>
         <div className="nav-link">
             <ul>
                 <a href="/wwe"><img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598134/WWE_Logo.svg_b2gftp.png" alt="" /></a>
@@ -30,6 +35,16 @@ const Header = () => {
         <div className="nav-link">
             <ul>
                 <li><img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763735323/drilldown_qddjmf.png" alt="" /></li>
+            </ul>
+        </div> 
+          <div className="nav-link">
+            <ul>
+                <li>
+                    <div className="userHeader">
+                        <a href="/login"><i class="fa-solid fa-user"></i>
+                        <h3>Login</h3></a>
+                    </div>
+                </li>
             </ul>
         </div> 
       </div>
