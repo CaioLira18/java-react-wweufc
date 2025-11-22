@@ -15,7 +15,7 @@ const Login = () => {
     <div className="loginContainer">
       <div className="loginBox">
         <div className="logoSection">
-          <div className="logosAdicionar">
+        <div className="logosAdicionar">
             <img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763598134/WWE_Logo.svg_b2gftp.png" alt="" />
             <img src="https://res.cloudinary.com/dthgw4q5d/image/upload/v1763735323/drilldown_qddjmf.png" alt="" />
         </div>
@@ -90,7 +90,7 @@ const Login = () => {
           </button>
 
           <p className="signupText">
-            Não tem uma conta? <a href="#" className="signupLink">Cadastre-se</a>
+            Não tem uma conta? <a href="/register" className="signupLink">Cadastre-se</a>
           </p>
         </form>
       </div>

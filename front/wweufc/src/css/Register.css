@@ -1,4 +1,4 @@
-/* Login.css */
+/* Register.css */
 
 @keyframes float {
   0%, 100% {
@@ -9,15 +9,15 @@
   }
 }
 
-.loginContainer {
+.registerContainer {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  margin-top: 100px;
   position: relative;
   overflow: hidden;
-  margin-top: 100px;
 }
 
 .backgroundDecoration {
@@ -29,22 +29,38 @@
   pointer-events: none;
 }
 
-.circle {
-  position: absolute;
-  border-radius: 50%;
-}
-
-.loginBox {
+.registerBox {
   background: rgba(30, 30, 30, 0.95);
   backdrop-filter: blur(20px);
   border-radius: 24px;
   padding: 50px 40px;
   width: 100%;
-  max-width: 450px;
+  max-width: 500px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   z-index: 1;
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
+/* Custom Scrollbar */
+.registerBox::-webkit-scrollbar {
+  width: 8px;
+}
+
+.registerBox::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.registerBox::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.registerBox::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .logoSection {
@@ -75,10 +91,10 @@
   margin: 0;
 }
 
-.loginForm {
+.registerForm {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .inputGroup {
@@ -104,6 +120,7 @@
   left: 15px;
   color: rgba(255, 255, 255, 0.4);
   pointer-events: none;
+  z-index: 1;
 }
 
 .input {
@@ -140,24 +157,26 @@
   display: flex;
   align-items: center;
   transition: color 0.3s ease;
+  z-index: 1;
 }
 
 .eyeButton:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.optionsRow {
+.termsRow {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
+  align-items: flex-start;
+  font-size: 13px;
+  margin-top: 5px;
 }
 
 .checkboxLabel {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  align-items: flex-start;
+  gap: 10px;
   cursor: pointer;
+  line-height: 1.5;
 }
 
 .checkbox {
@@ -165,23 +184,26 @@
   height: 18px;
   cursor: pointer;
   accent-color: #3b82f6;
+  margin-top: 2px;
+  flex-shrink: 0;
 }
 
 .checkboxText {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.forgotPassword {
+.termsLink {
   color: #3b82f6;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.forgotPassword:hover {
+.termsLink:hover {
   color: #60a5fa;
+  text-decoration: underline;
 }
 
-.loginButton {
+.registerButton {
   width: 100%;
   padding: 16px;
   background: rgba(255, 255, 255, 0.05);
@@ -195,12 +217,12 @@
   margin-top: 10px;
 }
 
-.loginButton:hover {
+.registerButton:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-.loginButton:active {
+.registerButton:active {
   transform: translateY(0);
 }
 
@@ -208,7 +230,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .dividerLine {
@@ -250,27 +272,28 @@
   height: 20px;
 }
 
-.signupText {
+.loginText {
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 0;
 }
 
-.signupLink {
+.loginLink {
   color: #3b82f6;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.signupLink:hover {
+.loginLink:hover {
   color: #60a5fa;
 }
 
 /* Responsividade */
 @media (max-width: 500px) {
-  .loginBox {
+  .registerBox {
     padding: 40px 25px;
   }
 
@@ -280,6 +303,10 @@
 
   .title {
     font-size: 24px;
+  }
+
+  .registerForm {
+    gap: 15px;
   }
 
   .circle1, .circle2, .circle3 {

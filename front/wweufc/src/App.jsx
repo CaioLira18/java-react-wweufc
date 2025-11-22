@@ -12,6 +12,7 @@ import WWEpage from './pages/WWEpage'
 import AdicionarCinturao from './pages/AdicionarCinturao'
 import AdminPage from './pages/AdminPage'
 import Login from './pages/Login'
+import Register from './pages/Register'
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/adminpage" element={<AdminPage />} />
         <Route path="/wwe" element={<WWEpage />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </div>
   )

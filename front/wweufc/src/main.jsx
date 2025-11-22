@@ -10,6 +10,7 @@ import './css/IndividualMateria.css'
 import './css/IndividualLutador.css'
 import './css/WWE.css'
 import './css/Login.css'
+import './css/Register.css'
 import './css/AdminPage.css'
 
 
